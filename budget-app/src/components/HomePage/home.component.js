@@ -1,6 +1,5 @@
 import React, { Component }  from 'react';
 import UserService from "../../services/user.service";
-import { Link } from "react-router-dom";
 // import axios from 'axios';
 // import Chart from 'chart.js';
 

@@ -13,10 +13,8 @@ import Register from "./components/Auth/register.component";
 import Profile from "./components/Auth/profile.component";
 import BudgetsPage from "./components/Budget/budgets-page-component";
 import AddBudget from "./components/Budget/add-budget.component"
-import BudgetList from './components/Budget/list-budgets.component';
 
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Link

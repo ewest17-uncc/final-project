@@ -72,7 +72,7 @@ export default class BudgetsPage extends Component {
 
 
 render() {
-    if(this.state.content == "No token provided!"){
+    if(this.state.content === "No token provided!"){
         return (
             <div className="container">
                 <header className="jumbotron">
@@ -85,11 +85,13 @@ render() {
       const budgetTitles = [];
       const budgetValues  = [];
       budgets.map((budget) => (
-          budgetTitles.push(budget.title),
-          budgetValues.push(budget.budget)
+          budgetTitles.push(budget.title)
       ));
+      budgets.map((budget) => (
+        budgetValues.push(budget.budget)
+    ));
         console.log("LOGGGGGGG: ", budgets)
-      if(budgets.length != 0) {
+      if(budgets.length !== 0) {
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'pie',
@@ -116,6 +118,8 @@ render() {
             }
         });
       };
+
+      myChart ? console.log("Chart Working Correctly") : console.log("Chart Failed to Load");
 
         return (
         <div className="list row">
